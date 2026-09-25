@@ -22,5 +22,6 @@ read -ra OUTPUT_FILE <<< "$C_FILE"
 #   -Wall       All warnings
 #   -Wextra     Ativa avisos adicionais que o -Wall não cobre
 #   -Wpedantic  Emite avisos sobre tudo que não está em estrito conformidade com o padrão ISO
+#   -lm ativa a biblioteca math
 #
-gcc -Wall -Wextra -Wpedantic "${C_FILE}" -o "${OUTPUT_FILE[0]}.exe"
+gcc -lm -Wall -Wextra -Wpedantic "${C_FILE}" -o "${OUTPUT_FILE[0]}.exe"
